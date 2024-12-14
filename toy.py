@@ -22,8 +22,9 @@ def draw_boneco(surface, angle):
     pygame.draw.circle(surface, WHITE, (center_x, center_y - 100), 20)
 
     # Tronco
-    pygame.draw.line(surface, WHITE, (center_x, center_y - 80), (center_x, center_y + 50), 5)
-
+    pygame.draw.line(surface, WHITE, (center_x, center_y - 60), (center_x, center_y + 20), 41)
+    pygame.draw.circle(surface, WHITE, (center_x, center_y - 60), 21)
+    pygame.draw.circle(surface, WHITE, (center_x, center_y + 30), 21)
     # Braços (esquerdo e direito)
     arm_length = 60
     forearm_length = 50
@@ -41,8 +42,8 @@ def draw_boneco(surface, angle):
         left_elbow[0] + int(math.cos(arm_angle + math.pi / 2) * forearm_length),
         left_elbow[1] + int(math.sin(arm_angle + math.pi / 2) * forearm_length)
     )
-    pygame.draw.line(surface, WHITE, left_shoulder, left_elbow, 5)
-    pygame.draw.line(surface, WHITE, left_elbow, left_hand, 5)
+    pygame.draw.line(surface, WHITE, left_shoulder, left_elbow, 8)
+    pygame.draw.line(surface, WHITE, left_elbow, left_hand, 8)
 
     # Braço direito
     right_shoulder = (center_x, center_y - 60)
@@ -54,13 +55,13 @@ def draw_boneco(surface, angle):
         right_elbow[0] - int(math.cos(arm_angle + math.pi / 2) * forearm_length),
         right_elbow[1] + int(math.sin(arm_angle + math.pi / 2) * forearm_length)
     )
-    pygame.draw.line(surface, WHITE, right_shoulder, right_elbow, 5)
-    pygame.draw.line(surface, WHITE, right_elbow, right_hand, 5)
+    pygame.draw.line(surface, WHITE, right_shoulder, right_elbow, 8)
+    pygame.draw.line(surface, WHITE, right_elbow, right_hand, 8)
 
     # Pernas
     leg_length = 80
-    pygame.draw.line(surface, WHITE, (center_x, center_y + 50), (center_x - 30, center_y + 50 + leg_length), 5)
-    pygame.draw.line(surface, WHITE, (center_x, center_y + 50), (center_x + 30, center_y + 50 + leg_length), 5)
+    pygame.draw.line(surface, WHITE, (center_x-15, center_y + 30), (center_x - 15, center_y + 50 + leg_length), 9)
+    pygame.draw.line(surface, WHITE, (center_x+15, center_y + 30), (center_x + 15, center_y + 50 + leg_length), 9)
 
 # Loop principal
 running = True
