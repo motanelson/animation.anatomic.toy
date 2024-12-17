@@ -66,7 +66,7 @@ while running:
 
     # Limpar tela
     screen.fill(BLACK)
-    pygame.draw.line(screen,WHITE,(0,screen_height//1.7),(screen_width,screen_height//1.7))
+    pygame.draw.line(screen,WHITE,(0,screen_height//2),(screen_width,screen_height//2))
     # Desenhar o boneco
     boneco_rect = boneco_scaled.get_rect(center=(center_x, center_y))
     screen.blit(boneco_scaled, boneco_rect)
